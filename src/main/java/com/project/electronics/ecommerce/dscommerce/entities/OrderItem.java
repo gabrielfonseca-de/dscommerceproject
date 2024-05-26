@@ -12,8 +12,11 @@ public class OrderItem {
     private OrderItemPK id = new OrderItemPK();
     private Integer quantity;
     private Double price;
+    private Product product;
+
     public OrderItem() {
     }
+
     public OrderItem(Order order, Product product, Integer quantity, Double price) {
         id.setOrder(order);
         id.setProduct(product);
@@ -25,6 +28,38 @@ public class OrderItem {
     }
     public void setOrder(Order order) {
         id.setOrder(order);
+    }
+
+    public OrderItemPK getId() {
+        return id;
+    }
+
+    public void setId(OrderItemPK id) {
+        this.id = id;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
 }
